@@ -191,8 +191,10 @@
                 center: {
                     lat: 53.350140,
                     lng: -6.266155
+
                 },
-                zoom: 13,
+                zoom: 10,
+
             });
             new AutocompleteDirectionsHandler(map);
             infoWindow = new google.maps.InfoWindow();
@@ -224,6 +226,141 @@
                     // Browser doesn't support Geolocation
                     handleLocationError(false, infoWindow, map.getCenter());
                 }
+            });
+
+            const Bogoffrogs = {
+                lat: 53.376475,
+                lng: -6.079462
+            };
+
+            const contentString =
+                '<div id="content">' +
+                '<div id="siteNotice">' +
+                "</div>" +
+                '<h1 id="firstHeading" class="firstHeading">Bog of Frogs loop</h1>' +
+                '<div id="bodyContent">' +
+                "<p><b>Bog of Frogs Loop</b> Starting at the DART  " +
+                "(train) station in Howth village and following purple arrows " +
+                "this walk takes the path all along the cliffs to beyond Red Rock, " +
+                "passing the Baily Lighthouse, and then climbing to circle the Ben of Howth " +
+                "to return along the old tramline. The views of Lambay Island and Ireland’s Eye as well " +
+                "as Dublin Bay are spectacular. The cliffs are great for birds and grey seals may also be seen. " +
+                "<p><b>Gear recommened</b> Hiking shoes are recommended as a lot of the walk is uphill  " +
+                "<p><b>Time</b> 3 Hours " +
+                "<p><b>Distance</b> 12 KM " +
+                "<p><b>Ascent</b> 240 M " +
+                "<p><b>Difficulty</b>Strenuous"
+            "</div>" +
+            "</div>";
+            const infowindow = new google.maps.InfoWindow({
+                content: contentString,
+            });
+            const marker = new google.maps.Marker({
+                position: Bogoffrogs,
+                map,
+                title: "Bog of Frogs Loop",
+            });
+            marker.addListener("click", () => {
+                infowindow.open(map, marker);
+            });
+
+            const Howthcliffwalk = {
+                lat: 53.38882,
+                lng: -6.07422
+            };
+
+            const HowthcontentString =
+                '<div id="content">' +
+                '<div id="siteNotice">' +
+                "</div>" +
+                '<h1 id="firstHeading" class="firstHeading">Howth cliff walk</h1>' +
+                '<div id="bodyContent">' +
+                "<p><b>Howth Cliff Walk</b> Starting at the DART  " +
+                "(train) station in Howth village and following green arrows " +
+                "this walk takes the path along the cliffs climbing to ‘The Summit’ " +
+                "and returning along a path parallel to the outward route. " +
+                "The views of Lambay Island and Ireland’s Eye as well as Dublin Bay are spectacular. " +
+                " The cliffs are great for birds and grey seals may also be seen " +
+                "<p><b>Gear recommened</b> Hiking shoes are recommended as a lot of the walk is uphill  " +
+                "<p><b>Time</b> 2 Hours " +
+                "<p><b>Distance</b> 6 KM " +
+                "<p><b>Ascent</b> 130 M " +
+                "<p><b>Difficulty</b>Moderate"
+            "</div>" +
+            "</div>";
+            const Howthinfowindow = new google.maps.InfoWindow({
+                content: HowthcontentString,
+            });
+            const Howthmarker = new google.maps.Marker({
+                position: Howthcliffwalk,
+                map,
+                title: "Howth Cliff Walk",
+            });
+            Howthmarker.addListener("click", () => {
+                Howthinfowindow.open(map, Howthmarker);
+            });
+
+            const RoyalCanalGreenway = {
+                lat: 53.381621,
+                lng: -6.369103
+            };
+
+            const RCGcontentString =
+                '<div id="content">' +
+                '<div id="siteNotice">' +
+                "</div>" +
+                '<h1 id="firstHeading" class="firstHeading">Royal Canal Greenway</h1>' +
+                '<div id="bodyContent">' +
+                "<p><b>Royal Canal Greenway</b> This route provides a short but pleasant walk along the banks of the Royal Canal on a smooth tarmacadam path  " +
+                "<p><b>Time</b> 40 minutes " +
+                "<p><b>Distance</b> 2.7 KM " +
+                "<p><b>Ascent</b> 14 M " +
+                "<p><b>Difficulty</b>Easy"
+            "</div>" +
+            "</div>";
+            const RCGinfowindow = new google.maps.InfoWindow({
+                content: RCGcontentString,
+            });
+            const RCGmarker = new google.maps.Marker({
+                position: RoyalCanalGreenway,
+                map,
+                title: "Royal Cnal Greenway",
+            });
+            RCGmarker.addListener("click", () => {
+                RCGinfowindow.open(map, RCGmarker);
+            });
+
+            const LittlewoodForestWalk = {
+                lat: 53.721819,
+                lng: -6.524069
+            };
+
+            const LWcontentString =
+                '<div id="content">' +
+                '<div id="siteNotice">' +
+                "</div>" +
+                '<h1 id="firstHeading" class="firstHeading">Littlewood - Forest Walk</h1>' +
+                '<div id="bodyContent">' +
+                "<p><b>Littlewood - Forest Walk</b> " +
+                "This short level walk around the edge of the forest starts at the car park and " +
+                "follows forest track and path through mixed conifer and broadleaf woodland. " +
+                "Display boards highlight the diversity of the flora and fauna that can be seen. " +
+                "<p><b>Time</b> 40 minutes " +
+                "<p><b>Distance</b> 2 KM " +
+                "<p><b>Ascent</b> 4 M " +
+                "<p><b>Difficulty</b>Easy"
+            "</div>" +
+            "</div>";
+            const LWinfowindow = new google.maps.InfoWindow({
+                content: LWcontentString,
+            });
+            const LWmarker = new google.maps.Marker({
+                position: LittlewoodForestWalk,
+                map,
+                title: "Littlewood - Forest Walk",
+            });
+            LWmarker.addListener("click", () => {
+                LWinfowindow.open(map, LWmarker);
             });
         }
 
