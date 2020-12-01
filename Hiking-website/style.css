@@ -1,0 +1,22 @@
+body{
+    background-color: purple;
+}
+
+#navbar-brand{
+    max-width: 10%;
+    height:auto;
+}
+
+#nav-link {
+    padding: .3%;
+    float: right;
+    font-size: 3vw;
+    font-family: Georgia, serif;
+}
+
+#intro-text{
+    float: right;
+    background-color: blue;
+    max-width: 50%;
+}
+
