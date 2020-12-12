@@ -7,10 +7,6 @@ $nameDb = "ebael4c49y30hjon";
 
 echo ("started execution");
 
-//$name = "Jake";
-
-//$name = $_POST['username'];
-
 $connection = mysqli_connect($serverDb, $usernameDb, $passwordDb, $nameDb);
 
 if(!$connection){
