@@ -1,0 +1,40 @@
+body{
+    background-image: url("../Images/purpleSignIn.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#wrapper{
+    width: 1000px;
+    height: 1000px;
+    margin: auto;
+    padding-top: 100px;
+}
+
+#greeting{
+    font-family: Verdana;
+    font-size: 60px;
+    color: white;
+}
+
+#signInSection{
+    font-family: Verdana;
+    width: 600px;
+    height: 900px;
+    padding-top: 300px;
+    background: linear-gradient(180deg, rgba(44,62,80,1) 20%, rgba(140,82,255,1) 35%, rgba(240,255,0,1) 100%);
+    padding-left: 40px;
+    padding-right: 500px;
+    opacity: 99%;
+    border: 1px solid black;
+}
+
+#signInDiv{
+    padding-top:30px;
+}
+
+.userTextDisplay{
+    color:white;
+    width:300px;
+    font-size: 20px;
+}

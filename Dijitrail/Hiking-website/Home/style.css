@@ -1,5 +1,5 @@
 body {
-    background-image: url('Boots.jpg');
+    background-image: url('../Images/Boots.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -25,6 +25,7 @@ body {
 }
 
 #inner > h1{
+    font-family: Verdana;
     font-size: 75px;
     animation: Slide_Up 1.5s ease;
 }
@@ -51,9 +52,37 @@ body {
 }
 
 #smallBox{
-    background: linear-gradient(90deg, rgba(52, 58, 64, 1) 0%, rgba(140,82,255,1) 35%, rgba(243,0,255,1) 100%);
-    padding-top: 350px;
-    padding-bottom: 625px;
-    max-width:100%;
+    background-image: url("rollingClouds.gif");
+    background-size:100%;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 60px;
+    max-width: 100%;
     height: auto;
+    border-radius: 10px;
+    color: white;
+    font-family: Verdana;
+    font-size: 40px;
+}
+#gifBlur{
+    max-width: 1900px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(20px);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+#bigText{
+    padding-right: 400px;
+}
+
+.demonstrateText{
+    font-family: Verdana;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding-left:100px;
 }
