@@ -1,4 +1,4 @@
-<?php include_once '..Head/head.php'; ?>
+<?php include_once '../Head/head.php'; ?>
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <div id="googleMap" style="width:100%;height:800px;"></div>

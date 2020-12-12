@@ -1,14 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" >
-	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minumum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Rating System</title>
-	<script src="https://kit.fontawesome.com/64628dcc28.js" crossorigin="anonymous"></script>
-	</head>
-<body>
+<?php include_once '../Head/head.php'; ?>
 	<div align="center" style="background: #000; padding: 50px;">
 		<i class="fa fa-star fa-2x" data-index="0"></i>
 		<i class="fa fa-star fa-2x" data-index="1"></i>
