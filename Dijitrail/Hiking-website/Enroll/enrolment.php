@@ -11,7 +11,6 @@
             </form>
         </div>
         <?php
-
         //errors to display to user using superglobal GET. Checks URL for conditions
         if(isset($_GET["error"])){
             if($_GET["error"] == "blankinput") {
