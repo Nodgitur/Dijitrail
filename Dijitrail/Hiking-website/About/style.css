@@ -1,6 +1,7 @@
 body{
     background-image: url("../Images/aboutBackground.png");
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 #wrapper{

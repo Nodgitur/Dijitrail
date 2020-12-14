@@ -35,8 +35,6 @@
                 <?php
                     //session variable possible from session_start function
                     if(isset($_SESSION["username"])){
-                echo " <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger' href='../AccessingAccount/signIn.php'>Sign in</a>
-                </li>";
                 echo "<li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger' href='../Certifications/logOut.php'>Log out</a>
                 </li>";
                 }

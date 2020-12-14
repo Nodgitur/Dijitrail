@@ -1,6 +1,4 @@
 <?php
-include '../Certifications/enrollCheck.php';
-include '../Enroll/enrolment.php';
 
 function blankInputEnroll($username, $email, $password, $conPassword){
     if(empty($username) || empty($email) || empty($password) || empty($conPassword)){
@@ -12,7 +10,7 @@ function blankInputEnroll($username, $email, $password, $conPassword){
     return $output;
 }
 
-function usernameDeniedEnroll($username){
+function usernameDenied($username){
     if(!preg_match("/^[a-zA-Z0-9]*$/", $username)){
         $output = true;
     }
@@ -22,7 +20,7 @@ function usernameDeniedEnroll($username){
     return $output;
 }
 
-function emailDeniedEnroll($email){
+function emailDenied($email){
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         $output = true;
     }
@@ -33,8 +31,10 @@ function emailDeniedEnroll($email){
 }
 
 //checking if passwords match
-function passwordMatchEnroll($password, $conPassword){
-    if($password !== $conPassword){
+function passwordMatch($password, $conPassword)
+{
+    if($password !== $conPassword)
+    {
         $output = true;
     }
     else{
@@ -50,7 +50,8 @@ function usernameExists($connection, $username, $email)
 
     mysqli_stmt_prepare($stmt, $sql);
 
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
+    if (!mysqli_stmt_prepare($stmt, $sql))
+    {
         header("location: ../Enroll/enrolment.php?error=usernameexists");
         exit();
     }
@@ -60,14 +61,17 @@ function usernameExists($connection, $username, $email)
 
     $outcomeData = mysqli_stmt_get_result($stmt);
 
-    if ($row = mysqli_fetch_assoc($outcomeData)) {
+    if ($row = mysqli_fetch_assoc($outcomeData))
+    {
         mysqli_stmt_close($stmt);
         return $row;
-    } else {
+    }
+    else {
         $outcome = false;
         mysqli_stmt_close($stmt);
         return $outcome;
     }
+    mysqli_stmt_close($stmt);
 }
 
 function createUser($connection, $username, $email, $password)
@@ -77,7 +81,8 @@ function createUser($connection, $username, $email, $password)
 
     mysqli_stmt_prepare($stmt, $sql);
 
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
+    if (!mysqli_stmt_prepare($stmt, $sql))
+    {
         header("location: ../Enroll/enrolment.php?error=usercreationfailure");
         exit();
     }
@@ -100,20 +105,24 @@ function createUser($connection, $username, $email, $password)
  */
 
 
-function blankInputSignIn($username, $password){
-    if(empty($username) || empty($password)){
+function blankInputSignIn($username, $password)
+{
+    if(empty($username) || empty($password))
+    {
         $output = true;
     }
-    else{
+    else {
         $output = false;
     }
     return $output;
 }
 
-function signInUser($connection, $username, $password){
+function signInUser($connection, $username, $password)
+{
     $usernameExists = usernameExists($connection, $username, $username); //using the same parameter twice because function above will decide on either
 
-    if($usernameExists === false){
+    if($usernameExists === false)
+    {
         header("location: ../AccessingAccount/signIn.php?error=incorrectsignininfo");
         exit();
     }
@@ -122,15 +131,16 @@ function signInUser($connection, $username, $password){
     $hashedPassword = $usernameExists["password"];
     $certifyPassword = password_verify($password, $hashedPassword);
 
-    if($certifyPassword === false){
-        header("location: ../AccessingAccount/SignIn.php?error=incorrectsignininfo");
+    if($certifyPassword === false)
+    {
+        header("location: ../AccessingAccount/signIn.php?error=incorrectsignininfo");
         exit();
     }
-    else{
-        session_start();
+    else
+    {
         $_SESSION["id"] = $usernameExists["id"]; //checking if id found in info entered and in database mirror each other
         $_SESSION["username"] = $usernameExists["username"]; //checking if username found in info entered and in database mirror each other
-        header("location: ../Home/index.php");
+        header("location: ../Home/index.php?error=noerrors");
         exit();
     }
 }
