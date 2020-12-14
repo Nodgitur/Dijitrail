@@ -7,10 +7,14 @@
             </div>
             <div class = "row">
                 <div class = "column">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../Gallery//Rating1.html">
                     <img src = "Connacht.png" alt = "West" title = "West" class = "provinces">
+                        </a>
                 </div>
                 <div class = "column">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../Gallery//Rating1.html">
                     <img src = "Leinster.png" alt = "East" title = "East" class = "provinces">
+                        </a>
                 </div>
             </div>
             <div class = "outerDiv">
@@ -19,10 +23,14 @@
             </div>
             <div class = "row">
                 <div class = "column">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../Gallery//Rating1.html">
                     <img src = "Ulster.png" alt = "North" title = "North" class = "provinces">
+                        </a>
                 </div>
                 <div class = "column">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../Gallery//Rating1.html">
                     <img src = "Munster.png" alt = "South" title = "South" class = "provinces">
+                        </a>
                 </div>
             </div>
         </div>
