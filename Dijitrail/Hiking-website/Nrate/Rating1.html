@@ -1,0 +1,140 @@
+﻿<?php include_once '../Head/head.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dijitrail - Make, Discover</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="Bootstrap/js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="../Bootstrap/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Bootstrap/css/heading.css">
+</head>
+<header>
+    <div id="container">
+        <form action="/action_page.php">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br><br>
+            <textarea id="5" name="5" rows="4" cols="50"> </textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</header>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="../Home/index.php"><img src="../Head/iji.png" width="50" height="50"></a>
+            <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../Gallery/index.php">Gallery</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../About/About.php">About</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../forum/Discover.php">Discover</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../directionsapi.php">Travel</a>
+                    </li>
+                    <?php
+                    //session variable possible from session_start function
+                    if(isset($_SESSION["username"])){
+
+                    <li class='nav-item mx-0 mx-lg-1'>
+                        <a class='nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger' href='../AccessingAccount/signIn.php'>Sign in</a>
+                    </li>
+
+                    <li class='nav-item mx-0 mx-lg-1'>
+                        <a class='nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger' href='../Certifications/logOut.php'>Log out</a>
+                    </li>
+
+
+
+                    <li class='nav-item mx-0 mx-lg-1'>
+                        <a class='nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger' href='../AccessingAccount/signIn.php'>Sign in</a>
+                    </li>
+                    <li class='nav-item mx-0 mx-lg-1'>
+                        <a class='nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger' href='../Enroll/enrolment.php'>Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <div align="center" style="background: #000; padding: 50px;">
+            <i class="fa fa-star fa-2x" data-index="0"></i>
+            <i class="fa fa-star fa-2x" data-index="1"></i>
+            <i class="fa fa-star fa-2x" data-index="2"></i>
+            <i class="fa fa-star fa-2x" data-index="3"></i>
+            <i class="fa fa-star fa-2x" data-index="4"></i>
+        </div>
+        <script>
+            var ratedIndex = -1;
+
+            $(document).ready(function () {
+                resetStarcolors();
+
+                if (localStorage.getItem('ratedIndex') != null)
+                    setStars(parseInt(localStorage.getItem('ratedIndex')));
+                // uID = localStorage.getItem('uID');
+
+                $('.fa-star').on('click', function () {
+                    ratedIndex = parseInt($(this).data('index'));
+                    localStorage.setItem('ratedIndex', ratedIndex);
+                });
+
+                $('.fa-star').mouseover(function () {
+                    resetStarcolors();
+                    var currentIndex = parseInt($(this).data('index'));
+                    setStars(currentIndex);
+                });
+
+                $('.fa-star').mouseleave(function () {
+                    resetStarcolors();
+
+                    if (ratedIndex != -1)
+                        setStars(ratedIndex);
+                });
+            });
+
+            function setStars(max) {
+                for (var i = 0; i <= max; i++)
+                    $('.fa-star:eq(' + i + ')').css('color', 'green');
+            }
+            function resetStarcolors() {
+                $('.fa-star').css('color', 'white');
+            }
+
+                        //function saveToTheDB() {
+                        //    $.ajax({
+                        //       url: "index.php",
+                        //       method: "POST",
+                        //       dataType: 'json',
+                        //       data: {
+                        //           save: 1,
+                        //           uID: uID,
+                        //           ratedIndex: ratedIndex
+                        //       }, success: function (r) {
+                        //            uID = r.id;
+                        //            localStorage.setItem('uID', uID);
+                        //       }
+                        //    });
+                        //}
+
+
+        </script>
+</html>
+<?php include_once '../Footer/footer.php'; ?>

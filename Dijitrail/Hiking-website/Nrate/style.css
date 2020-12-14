@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(90deg, rgba(52, 58, 64, 1) 0%, rgba(140,82,255,1) 35%, rgba(243,0,255,1) 100%);
+}
+
+#container
+{
+    padding-top:150px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.outerDiv
+{
+    width:100%;
+    height:5%;
+    float: left;
+}
+
+.leftDiv
+{
+    float:left;
+    font-size: 50px;
+    color: white;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+.rightDiv
+{
+    float:right;
+    font-size: 50px;
+    color: white;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+.column
+{
+    float: left;
+    width:50%;
+}
+
+.provinces
+{
+    float:left;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    padding: 10px;
+}
+
+.column:hover .provinces,
+.column:focus .provinces
+{
+    transform: scale(1.04);
+}
