@@ -1,9 +1,6 @@
 <?php
-echo ('will register');
 
 if(isset($_POST["enroll_action"])) {
-
-    echo ('Did register');
 
     $username = $_POST["username"];
     $email = $_POST["email"];
@@ -18,15 +15,15 @@ if(isset($_POST["enroll_action"])) {
         header("location: ../Enroll/enrolment.php?error=blankinput");
         exit();
     }
-    if(usernameDeniedEnroll($username) !== false){
+    if(usernameDenied($username) !== false){
         header("location: ../Enroll/enrolment.php?error=usernamedenied");
         exit();
     }
-    if(emailDeniedEnroll($email) !== false){
+    if(emailDenied($email) !== false){
         header("location: ../Enroll/enrolment.php?error=emaildenied");
         exit();
     }
-    if(passwordMatchEnroll($password, $conPassword) !== false){
+    if(passwordMatch($password, $conPassword) !== false){
         header("location: ../Enroll/enrolment.php?error=passwordsarenotmatching");
         exit();
     }

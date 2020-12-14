@@ -7,7 +7,7 @@
                 <input size = "50" type = "text" name = "email" placeholder = "Enter your email address.."/>
                 <input size = "50" type = "password" name = "password" placeholder = "Create a password.."/>
                 <input size = "50" type = "password" name = "conPassword" placeholder = "Repeat password.."/>
-                <button size = "50" type = "submit" name = "enroll_action">Register</button>
+                <button style = "width: 250px;" type = "submit" name = "enroll_action">Register</button>
             </form>
         </div>
         <?php

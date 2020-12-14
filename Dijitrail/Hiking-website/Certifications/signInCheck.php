@@ -9,7 +9,7 @@ if(isset($_POST["signin_action"])){
     require_once '../Database/db.php';
     require_once 'controls.php';
 
-    if(blankInputSignIn($username, $password) !== false){
+    if(blankInputSignIn($username, $password) === true){
         header("location: ../AccessingAccount/signIn.php?error=blankinput");
         exit();
     }

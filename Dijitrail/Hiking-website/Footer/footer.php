@@ -17,7 +17,6 @@
                     <p class="pre-wrap lead mb-0">Support Team: +353 20 916 0764</p>
                     <p class="pre-wrap lead mb-0">Email: dijitrail@student.ncirl.ie</p>
                     <p class="pre-wrap lead mb-0">Our College: <a href = "https://www.ncirl.ie"> https://www.ncirl.ie</a></p>
-                    <p class="pre-wrap lead mb-0">Support Team: +353 20 916 0764    </p>
                 </div>
             </div>
         </div>
