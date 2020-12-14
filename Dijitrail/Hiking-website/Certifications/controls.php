@@ -138,6 +138,7 @@ function signInUser($connection, $username, $password)
     }
     else
     {
+        session_start();
         $_SESSION["id"] = $usernameExists["id"]; //checking if id found in info entered and in database mirror each other
         $_SESSION["username"] = $usernameExists["username"]; //checking if username found in info entered and in database mirror each other
         header("location: ../Home/index.php?error=noerrors");

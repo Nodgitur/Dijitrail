@@ -17,25 +17,25 @@ body {
     margin-top:5px;
 }
 
-#inner{
-    text-align:center;
+.inner{
+    text-align: left;
     color: white;
     overflow: hidden;
     padding: 1px;
 }
 
-#inner > h1{
+.inner > h1{
     font-family: Verdana;
     font-size: 75px;
-    animation: Slide_Up 1.5s ease;
+    animation: Slide_Across 1.5s ease;
 }
 
-#inner > p{
+.inner > p{
     font-size:25px;
-    animation: Slide_Up 2s ease;
+    animation: Slide_Across 2s ease;
 }
 
-@keyframes Slide_Up{
+@keyframes Slide_Across{
     0%{
         transform:translate(1000px);
     }
