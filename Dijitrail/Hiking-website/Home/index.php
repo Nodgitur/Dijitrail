@@ -19,8 +19,6 @@
         <div id = "gifBlur">
             <h1 id = "bigText">Our website covers a fair bit. We'll explain how you get around.</h1>
             <br>
-            <i class="fas fa-map" style = "float: left;"></i>
-            <p class = "demonstrateText">You can navigate around our map to look for new trails in the Discover tab.</p>
             <i class="fas fa-route" style = "float: left;"></i>
             <p class = "demonstrateText">Having a hard time planning your journey? No worries, we'll plan it for you with our Travel tab!</p>
             <i class="fas fa-image" style = "float: left;"></i>
