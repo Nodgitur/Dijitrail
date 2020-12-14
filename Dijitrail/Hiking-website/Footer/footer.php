@@ -3,14 +3,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="mb-4">LOCATION</h4>
-                    <p class="pre-wrap lead mb-0">Ireland</p>
+                    <h4 class="mb-4">LEGAL</h4>
+                    <p class="pre-wrap lead mb-0">Copyright © 2020 by Team Blueberry</p>
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="mb-4">SOCIAL MEDIA</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>
+                    <h4 class="mb-4">SOCIAL MEDIA</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.irishtimes.com/topics/topics-7.1213540?article=true&tag_person=Keith+Maycock"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/keithmaycock?lang=en"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/dr-keith-maycock-05161417/"><i class="fab fa-fw fa-linkedin-in"></i></a>
                 </div>
                 <div class="col-lg-4">
                     <h4 class="mb-4">CONTACT INFO</h4>

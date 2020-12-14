@@ -3,7 +3,11 @@
         <div class="container d-flex align-items-center flex-column">
             <div id="sliders">
                 <div id="outer">
-                    <div id="inner">
+                    <div class="inner">
+                        <?php if(isset($_SESSION["username"])){
+                            echo "<p class = 'inner' style = 'color: rgba(243,0,255,1); font-weight: bold; animation: Slide_Across 0.7s ease;'>Hello, ". $_SESSION["username"]."</p>";
+                        }
+                        ?>
                         <h1>Fáilte, to Dijitrail </h1>
                         <p>Scroll down to get started</p>
                     </div>
