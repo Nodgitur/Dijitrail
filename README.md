@@ -1,6 +1,6 @@
 # Dijitrail
 
-This is a Team Project full stack college project for a social media styled hiking web application. 
+This is a third year Team Project full stack college project for a social media styled hiking web application. 
 
 ## The Work
 
